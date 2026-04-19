@@ -22,7 +22,7 @@ MonoBehaviour:
   depthDistanceModulation: 0.329
   grazingAngleMaskPower: 0.2
   grazingAngleMaskHardness: 1
-  normalSensitivity: 0.4
+  normalSensitivity: 1
   luminanceSensitivity: 0.5
   objectId: 1
   particles: 0
