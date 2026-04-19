@@ -51,15 +51,15 @@ MonoBehaviour:
   scaleWithResolution: 1
   referenceResolution: 2
   customResolution: 0
-  distortEdges: 0
-  distortionStepRate: 0
-  distortionTexture: {fileID: 0}
-  distortionScale: 0.2
-  distortionStrength: 0.1
+  distortEdges: 1
+  distortionStepRate: 15
+  distortionTexture: {fileID: 11700000, guid: 282481b86e398a74dbad4ceb0d60f5a5, type: 2}
+  distortionScale: 0.05
+  distortionStrength: 0.05
   distortionThicknessInfluence: 0
   breakUpEdges: 1
-  breakUpNoiseScale: 8.61
-  breakUpNoiseAmount: 0.322
+  breakUpNoiseScale: 10
+  breakUpNoiseAmount: 0.2845
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   outlineColor: {r: 0, g: 0, b: 0, a: 1}
   overrideColorInShadow: 0
