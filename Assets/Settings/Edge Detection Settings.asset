@@ -43,8 +43,8 @@ MonoBehaviour:
     m_Bits: 0
   maskInfluence: 7
   kernel: 0
-  outlineThickness: 3
-  scaleWithDistance: 0
+  outlineThickness: 2
+  scaleWithDistance: 1
   distanceScaleStart: 100
   distanceScaleDistance: 10
   distanceScaleMin: 0.1
@@ -59,13 +59,13 @@ MonoBehaviour:
   distortionThicknessInfluence: 0
   breakUpEdges: 1
   breakUpNoiseScale: 8.61
-  breakUpNoiseAmount: 0.277
+  breakUpNoiseAmount: 0.322
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   outlineColor: {r: 0, g: 0, b: 0, a: 1}
   overrideColorInShadow: 0
   outlineColorShadow: {r: 1, g: 1, b: 1, a: 1}
   fill: 0
-  fillColor: {r: 0, g: 0, b: 0, a: 1}
+  fillColor: {r: 1, g: 1, b: 1, a: 1}
   fadeByDistance: 0
   distanceFadeColor: {r: 0, g: 0, b: 0, a: 0}
   distanceFadeStart: 100
