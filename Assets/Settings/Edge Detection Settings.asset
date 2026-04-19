@@ -17,13 +17,13 @@ MonoBehaviour:
   debugView: 0
   debugSectionsChannels: 7
   debugPerceptualSections: 0
-  discontinuityInput: 3
+  discontinuityInput: 7
   depthSensitivity: 0.079
   depthDistanceModulation: 0.329
   grazingAngleMaskPower: 0.2
   grazingAngleMaskHardness: 1
   normalSensitivity: 0.4
-  luminanceSensitivity: 0.3
+  luminanceSensitivity: 0.5
   objectId: 1
   particles: 0
   sectionMapInput: 0
@@ -43,7 +43,7 @@ MonoBehaviour:
     m_Bits: 0
   maskInfluence: 7
   kernel: 0
-  outlineThickness: 2
+  outlineThickness: 1
   scaleWithDistance: 1
   distanceScaleStart: 100
   distanceScaleDistance: 10
