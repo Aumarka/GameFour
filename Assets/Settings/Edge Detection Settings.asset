@@ -18,12 +18,12 @@ MonoBehaviour:
   debugSectionsChannels: 7
   debugPerceptualSections: 0
   discontinuityInput: 7
-  depthSensitivity: 0.079
-  depthDistanceModulation: 0.329
-  grazingAngleMaskPower: 0.2
-  grazingAngleMaskHardness: 1
-  normalSensitivity: 1
-  luminanceSensitivity: 0.5
+  depthSensitivity: 1
+  depthDistanceModulation: 1
+  grazingAngleMaskPower: 1
+  grazingAngleMaskHardness: 30
+  normalSensitivity: 0.5
+  luminanceSensitivity: 0.75
   objectId: 1
   particles: 0
   sectionMapInput: 0
@@ -52,20 +52,20 @@ MonoBehaviour:
   referenceResolution: 2
   customResolution: 0
   distortEdges: 1
-  distortionStepRate: 15
+  distortionStepRate: 12
   distortionTexture: {fileID: 11700000, guid: 282481b86e398a74dbad4ceb0d60f5a5, type: 2}
-  distortionScale: 0.05
-  distortionStrength: 0.05
-  distortionThicknessInfluence: 0
+  distortionScale: 0.1623
+  distortionStrength: 0.105
+  distortionThicknessInfluence: 2.55
   breakUpEdges: 1
-  breakUpNoiseScale: 10
-  breakUpNoiseAmount: 0.2845
+  breakUpNoiseScale: 11.91
+  breakUpNoiseAmount: 0.233
   backgroundColor: {r: 0, g: 0, b: 0, a: 0}
   outlineColor: {r: 0, g: 0, b: 0, a: 1}
   overrideColorInShadow: 0
-  outlineColorShadow: {r: 1, g: 1, b: 1, a: 1}
+  outlineColorShadow: {r: 0, g: 0, b: 0, a: 1}
   fill: 0
-  fillColor: {r: 1, g: 1, b: 1, a: 1}
+  fillColor: {r: 1, g: 0, b: 0, a: 1}
   fadeByDistance: 0
   distanceFadeColor: {r: 0, g: 0, b: 0, a: 0}
   distanceFadeStart: 100

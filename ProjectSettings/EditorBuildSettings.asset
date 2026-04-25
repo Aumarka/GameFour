@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Game/_Scenes/TrainStation.unity
+    guid: 467977e542ae2f240968dcbc50131329
+  - enabled: 1
     path: Assets/_Game/_Scenes/Apartment.unity
     guid: 7bf5df02ad79f7242a0d051731752757
   - enabled: 1

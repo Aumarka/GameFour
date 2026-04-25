@@ -1,3 +1,4 @@
+using Linework.EdgeDetection;
 using UnityEngine;
 using UnityEngine.InputSystem;
 

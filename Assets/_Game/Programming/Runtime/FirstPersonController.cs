@@ -3,6 +3,7 @@
 // Setup: Attach to a GameObject with a CharacterController. 
 //        Create an InputActionAsset with "Move" (Vector2), "Look" (Vector2), and "Jump" (Button) actions.
 
+using Linework.EdgeDetection;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
