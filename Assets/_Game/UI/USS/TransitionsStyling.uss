@@ -1,0 +1,9 @@
+:root {
+}
+
+.dialogueDown {
+    translate: 0 300px;
+}
+
+.dialogueUp {
+}

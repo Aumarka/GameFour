@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e613fc9ddf656e24c8d0295c560bee7e, type: 3}
+  m_Name: TestDialogueCollectionData2
+  m_EditorClassIdentifier: Assembly-CSharp::DialogueCollectionData
+  m_dialogueCollection:
+  - {fileID: 11400000, guid: 10af5f0150b2f3d49bff6ef8d244a728, type: 2}
+  - {fileID: 11400000, guid: fa8687285262b6c4b9aee0328fff6d28, type: 2}
+  - {fileID: 11400000, guid: 3d683a728c259a141a241fc9aa07920b, type: 2}
+  - {fileID: 11400000, guid: 7d677c593023a6242a2e33f5ecf2d80e, type: 2}
+  - {fileID: 11400000, guid: 29416d0dbafc7134ba0023c2b30373be, type: 2}

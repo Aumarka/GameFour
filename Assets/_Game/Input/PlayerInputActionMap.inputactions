@@ -1,6 +1,6 @@
 {
     "version": 1,
-    "name": "Player",
+    "name": "PlayerInputActionMap",
     "maps": [
         {
             "name": "Player",
@@ -37,6 +37,15 @@
                     "name": "Sprint",
                     "type": "Button",
                     "id": "79c8cddd-1535-46db-8418-786509428bc7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "3c18252c-a8cc-4a7d-b5d0-2638ce87600e",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -129,6 +138,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "Sprint",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "7e02389b-6a42-438e-9159-7e28a098b893",
+                    "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

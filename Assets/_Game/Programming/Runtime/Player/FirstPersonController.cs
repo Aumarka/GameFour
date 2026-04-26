@@ -2,8 +2,6 @@
 // Requires: Unity Input System package, CharacterController component
 // Setup: Attach to a GameObject with a CharacterController. 
 //        Create an InputActionAsset with "Move" (Vector2), "Look" (Vector2), and "Jump" (Button) actions.
-
-using Linework.EdgeDetection;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -40,9 +38,27 @@ public class FirstPersonController : MonoBehaviour
     private Vector3 _velocity;
     private float _cameraPitch;
     private bool _isGrounded;
+    private bool _movementEnabled;
+    private bool _lookEnabled;
+
+
+    private void OnEnable()
+    {
+        PlayerInputLock.LockStateChanged += OnInputLockChanged;
+    }
+
+    private void OnDisable()
+    {
+        PlayerInputLock.LockStateChanged -= OnInputLockChanged;
+    }
 
     private void Awake()
     {
+        Application.targetFrameRate = 60;
+
+        _movementEnabled = true;
+        _lookEnabled = true;
+
         _controller = GetComponent<CharacterController>();
         _playerInput = GetComponent<PlayerInput>();
 
@@ -100,14 +116,17 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleMovement()
     {
-        Vector2 input = _moveAction.ReadValue<Vector2>();
-        bool isSprinting = _sprintAction.IsPressed();
+        if (_movementEnabled)
+        {
+            Vector2 input = _moveAction.ReadValue<Vector2>();
+            bool isSprinting = _sprintAction.IsPressed();
 
-        float currentSpeed = isSprinting ? sprintSpeed : moveSpeed;
+            float currentSpeed = isSprinting ? sprintSpeed : moveSpeed;
 
-        // Build a direction relative to where the player is facing
-        Vector3 move = transform.right * input.x + transform.forward * input.y;
-        _controller.Move(move * (currentSpeed * Time.deltaTime));
+            // Build a direction relative to where the player is facing
+            Vector3 move = transform.right * input.x + transform.forward * input.y;
+            _controller.Move(move * (currentSpeed * Time.deltaTime));
+        }      
     }
 
     // -------------------------------------------------------------------------
@@ -129,15 +148,18 @@ public class FirstPersonController : MonoBehaviour
 
     private void HandleLook()
     {
-        Vector2 lookDelta = _lookAction.ReadValue<Vector2>();
+        if (_lookEnabled)
+        {
+            Vector2 lookDelta = _lookAction.ReadValue<Vector2>();
 
-        // Horizontal — rotate the whole player body
-        transform.Rotate(Vector3.up * lookDelta.x * mouseSensitivity);
+            // Horizontal — rotate the whole player body
+            transform.Rotate(Vector3.up * lookDelta.x * mouseSensitivity);
 
-        // Vertical — rotate only the camera (pitch)
-        _cameraPitch -= lookDelta.y * mouseSensitivity;
-        _cameraPitch = Mathf.Clamp(_cameraPitch, -verticalLookClamp, verticalLookClamp);
-        cameraTransform.localRotation = Quaternion.Euler(_cameraPitch, 0f, 0f);
+            // Vertical — rotate only the camera (pitch)
+            _cameraPitch -= lookDelta.y * mouseSensitivity;
+            _cameraPitch = Mathf.Clamp(_cameraPitch, -verticalLookClamp, verticalLookClamp);
+            cameraTransform.localRotation = Quaternion.Euler(_cameraPitch, 0f, 0f);
+        } 
     }
 
     // -------------------------------------------------------------------------
@@ -149,5 +171,14 @@ public class FirstPersonController : MonoBehaviour
         if (groundCheck == null) return;
         Gizmos.color = _isGrounded ? Color.green : Color.red;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
+    }
+
+    private void OnInputLockChanged(bool isLocked)
+    {
+
+        Debug.Log(isLocked);
+
+        _movementEnabled = !isLocked;
+        _lookEnabled = !isLocked;
     }
 }
