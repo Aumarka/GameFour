@@ -10,6 +10,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 61e89cc5fe1941d4f82b7ab858f2555f, type: 3}
-  m_Name: 4_TestDialogueFive
+  m_Name: 5_TestDialogueSix
   m_EditorClassIdentifier: Assembly-CSharp::DialogueData
-  m_dialogue: You will.
+  m_dialogue: Just give it some time.
